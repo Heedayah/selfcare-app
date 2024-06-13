@@ -23,7 +23,7 @@ Check out the live demo [here](https://your-username.github.io/selfcare-app/).
     ```sh
     selfcare-app
     ```
-3. Open `1-main.html` in your web browser to view the app locally.
+3. Open `index.html` in your web browser to view the app locally.
 
 ## Usage
 

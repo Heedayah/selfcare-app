@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ];    
 
         if (weatherBanner) weatherBanner.addEventListener("click", () => window.location.href = "2-weather.html");
-        if (backButton) backButton.addEventListener('click', () => window.location.href = '1-main.html');
+        if (backButton) backButton.addEventListener('click', () => window.location.href = 'index.html');
         if (forecastIcon) forecastIcon.addEventListener('click', () => window.location.href = '2.1-forecast.html');
         if (activateButton) activateButton.addEventListener('click', () => window.location.href = '3-home.html');
         if (fbackButton) fbackButton.addEventListener('click', () => window.location.href = '2-weather.html');

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Weather API</title>
+    </head>
+    
+<body>
+
+<div class="container" id="activity-page">
+    <img src="images/background.png" alt="background">
+
+    <div class="statusBar">
+        <img src="images/statusbar-dark.png" alt="statusBar">
+    </div>
+
+    <div class="activity2-header">
+        <span class="x-button ph--x-bold"></span>
+    </div>
+
+    <div class="water-level">
+        <img src="images/water-level-0.png" alt="waterlevel" class="waterlevel" id="water-level-0">
+    </div>
+    
+    <div class="plus-minus">
+        <button class="ic--round-minus">-</button>
+
+        <div class="level">0 ml</div>
+  
+        <button class="ic--round-plus">+</button>
+    </div>
+
+    <button class="button" id="add-button">Add Water</button>
+
+    <div class="footer" id="footer-activity">
+        <div class="home-indicator" id="activity-indicator"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+<script src="main.js"></script>
+
+</body>
+</html>

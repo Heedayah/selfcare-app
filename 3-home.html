@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather API</title>
+</head>
+<body>
+<div class="container">
+    <div class="statusBar">
+        <img src="images/statusbar-dark.png" alt="statusBar">
+    </div>
+    <div class="main-header">
+        <div class="main-header-top">
+            <div class="main-heading">Good Morning</div>
+            <span class="notification-icon"></span>
+        </div>
+        <div class="text" id="text-header">We wish you have a good day</div>
+    </div>    
+    <div class="home-weather-banner">
+        <img src="images/weather-banner.png" alt="weather-banner">
+        <img src="images/sun-icon.png" alt="weather-icon" class="w-icon" id="home-w-icon">
+        <div class="location" id="home-location">Skudai, Johor</div>
+        <div class="w-temp" id="home-w-temp">32&#176;C</div>
+        <div class="condition" id="home-condition">Sunny</div>
+        <span class="arrow-button" id="arrow-button"></span>
+    </div>
+    <div class="home-activity-container">
+        <div class="text" id="home-text-activity">Today's Activity Picks</div>
+        <div class="progress-bar">
+            <div class="subtext" id="progress-text">Progress</div>
+            <img src="images/progressbar.png" alt="progress bar">
+        </div>
+        <div class="home-activity-cards">
+            <div class="home-activity-card" id="activity-hydration">
+                <img src="images/h-activity-card-blue.png" alt="activity card">
+                <div class="home-activity" id="activity1">Hydration Boost</div>
+            </div>
+            <div class="home-activity-card">
+                <img src="images/h-activity-card-red.png" alt="activity card">
+                <div class="home-activity" id="activity2">Hydration Boost</div>
+            </div>
+            <div class="home-activity-card">
+                <img src="images/h-activity-card-yellow.png" alt="activity card">
+                <div class="home-activity" id="activity3">Hydration Boost</div>
+            </div>
+            <div class="home-activity-card">
+                <img src="images/h-activity-card-green.png" alt="activity card">
+                <div class="home-activity" id="activity4">Hydration Boost</div>
+            </div>
+        </div>
+    </div>
+    <div class="home-navigation">
+        <img src="images/navigation.png" alt="navigation" class="home-navigation">
+    </div>
+    <div class="footer">
+        <div class="home-indicator"></div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

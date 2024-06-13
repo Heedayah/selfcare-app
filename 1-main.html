@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Weather API</title>
+    </head>
+    
+<body>
+
+<div class="container">
+    <div class="statusBar">
+        <img src="images/statusbar-dark.png" alt="statusBar">
+    </div>
+
+    <div class="main-header">
+        <div class="main-header-top">
+            <div class="main-heading">Good Morning</div>
+            <span class="notification-icon"></span>
+        </div>
+        <div class="text" id="text-header">We wish you have a good day</div>
+    </div>    
+
+    <div class="main-weather-banner">
+        <img src="images/weather-banner.png" alt="weather-banner">
+
+        <img src="images/sun-icon.png" alt="weather-icon" class="w-icon" id="main-w-icon">
+        <div class="location" id="main-location">Skudai, Johor</div>
+        <div class="w-temp" id="main-w-temp">32&#176;C</div>
+        <div class="condition" id="main-condition">Sunny</div>
+
+        <span class="arrow-button" id="arrow-button"></span>
+    </div>
+
+    <div class="main-activity-container">
+        <div class="text" id="text-activity">Today's Activity Picks</div>
+
+        <img src="images/sad-icon.png" alt="sad-icon" class="sad-icon">
+
+        <div class="text" id="text-noactivity">You Haven't Started Your Journey Yet</div>
+        <div class="sub-text">It looks like you haven't activated any activities yet.</div>
+        <div class="sub-text">Tap the weather icon to start your self-care journey.</div>
+    </div>
+
+    <div class="navigation">
+        <img src="images/navigation.png" alt="navigation" class="navigation">
+    </div>
+
+    <div class="footer">
+        <div class="home-indicator"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather API</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="statusBar">
+        <img src="images/statusbar-dark.png" alt="statusBar">
+    </div>
+
+    <div class="forecast-header">
+        <div class="back-button" id="f-backButton">
+            <img src="images/back-button-dark.png" alt="f-back-button">
+        </div>
+        <div class="f-header">5-Day Forecast</div>
+    </div>
+
+    <div class="forecast-container">
+        <div class="forecast-card">
+            <div class="day" id="forecast-date">Tue</div>
+            <img src="images/sun-icon.png" alt="weather icon" class="f-icon" id="forecast-icon">
+            <div class="temp" id="forecast-temp">Day - 35.6&#176; C</div>
+            <div class="temp" id="forecast-temp">Night - 25.6&#176; C</div>
+        </div>
+
+        <div class="forecast-activity-container">
+            <div class="sub-text" id="forecast-subtext">Recommended Activities</div>
+            
+            <div class="activity-cards">
+                <div class="forecast-activity-card">
+                    <img src="images/f-activity-card-blue.png" alt="activity card">
+                    <div class="forecast-activity" id="activity1">Hydration Boost</div>
+                </div>
+
+                <div class="forecast-activity-card">
+                    <img src="images/f-activity-card-red.png" alt="activity card">
+                    <div class="forecast-activity" id="activity2">Clear Mind Meditation</div>
+                </div>
+
+                <div class="forecast-activity-card">
+                    <img src="images/f-activity-card-yellow.png" alt="activity card">
+                    <div class="forecast-activity" id="activity3">Hydration Boost</div>
+                </div>
+
+                <div class="forecast-activity-card">
+                    <img src="images/f-activity-card-green.png" alt="activity card">
+                    <div class="forecast-activity" id="activity4">Hydration Boost</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Repeat forecast-card and forecast-activity-container for other days as needed -->
+
+    </div>
+
+    <div class="footer">
+        <div class="home-indicator"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

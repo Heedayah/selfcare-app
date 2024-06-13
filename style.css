@@ -1,0 +1,807 @@
+/* General and Main Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #222;
+}
+
+.container {
+    width: 390px;
+    height: 844px;
+    max-width: 470px;
+    background: white;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    word-wrap: break-word;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.statusBar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure it's above other content */
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px; /* Adjust based on your design */
+    align-items: flex-start; /* Align items to the left */
+    padding: 0 20px; /* Add padding for left alignment */
+}
+
+.main-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.main-heading {
+    color: #3F414E;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 25.94px;
+    word-wrap: break-word;
+}
+
+.notification-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M28.707 19.293L26 16.586V13a10.014 10.014 0 0 0-9-9.95V1h-2v2.05A10.014 10.014 0 0 0 6 13v3.586l-2.707 2.707A1 1 0 0 0 3 20v3a1 1 0 0 0 1 1h7v.777a5.15 5.15 0 0 0 4.5 5.199A5.006 5.006 0 0 0 21 25v-1h7a1 1 0 0 0 1-1v-3a1 1 0 0 0-.293-.707M19 25a3 3 0 0 1-6 0v-1h6Zm8-3H5v-1.586l2.707-2.707A1 1 0 0 0 8 17v-4a8 8 0 0 1 16 0v4a1 1 0 0 0 .293.707L27 20.414Z'/%3E%3C/svg%3E");
+    background-color: #565D70;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.text {
+    color: #A1A4B2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17.30px;
+}
+
+#text-header{
+    word-wrap: break-word;
+    margin-top: 10px; /* Add some space above the text */
+}
+
+.main-weather-banner {
+    position: relative;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+.main-weather-banner img {
+    width: 100%;
+    height: auto;
+}
+
+#main-w-icon {
+    position: absolute;
+    top: 8px; /* Adjust based on your design */
+    left: 30px; /* Adjust based on your design */
+    width: 105px !important; /* Desired width */
+    height: 105px !important; /* Desired height */
+    margin: 10px;
+}
+
+#main-location{
+    position: absolute;
+    top: 25px; /* Adjust based on your design */
+    left: 170px; /* Adjust based on your design */
+    color: white; /* Ensure text is visible */
+    font-size: 16px; /* Adjust based on your design */
+}
+
+#main-w-temp{
+    position: absolute;
+    top: 45px; /* Adjust based on your design */
+    left: 170px; /* Adjust based on your design */
+    color: white; /* Ensure text is visible */
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#main-condition{
+    position: absolute;
+    top: 95px; /* Adjust based on your design */
+    left: 170px; /* Adjust based on your design */
+    color: white; /* Ensure text is visible */
+    font-size: 16px; /* Adjust based on your design */
+}
+
+.arrow-button {
+    position: absolute;
+    top: 40px; /* Adjust based on your design */
+    right: 10px; 
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    transform: rotate(180deg); /* Rotate by 180 degrees */
+    background: url('images/back-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M328 112L184 256l144 144'/%3E%3C/svg%3E");
+    background-color: white;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.main-activity-container {
+    margin-top: 20px;
+}
+
+#text-activity {
+    height: 1.2;
+    margin-left: 20px;
+    margin-top: -40px;
+    text-align: left;
+}
+
+.sad-icon{
+    margin-top: 50px;
+}
+
+#text-noactivity{
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.sub-text{
+    color: #A1A4B2;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.navigation {
+    position: relative;
+    bottom: -25px;
+
+}
+
+.navigation img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0px -18px 14px rgba(140, 143, 146, 0.158);
+}
+
+.footer {
+    position: relative;
+    width: 390px;
+    padding-top: 17px;
+    padding-bottom: 9px;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.home-indicator {
+    width: 127px;
+    height: 5px;
+    background: black;
+    border-radius: 100px;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*Home Styles*/
+
+.home-weather-banner {
+    position: relative;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.home-weather-banner img {
+    width: 100%;
+    height: auto;
+}
+
+#home-w-icon {
+    position: absolute;
+    top: 8px; /* Adjust based on your design */
+    left: 30px; /* Adjust based on your design */
+    width: 105px !important; /* Desired width */
+    height: 105px !important; /* Desired height */
+    margin: 10px;
+}
+
+#home-location{
+    position: absolute;
+    top: 25px; /* Adjust based on your design */
+    left: 170px; /* Adjust based on your design */
+    color: white; /* Ensure text is visible */
+    font-size: 16px; /* Adjust based on your design */
+}
+
+#home-w-temp{
+    position: absolute;
+    top: 45px; /* Adjust based on your design */
+    left: 170px; /* Adjust based on your design */
+    color: white; /* Ensure text is visible */
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#home-condition{
+    position: absolute;
+    top: 95px; /* Adjust based on your design */
+    left: 170px; /* Adjust based on your design */
+    color: white; /* Ensure text is visible */
+    font-size: 16px; /* Adjust based on your design */
+}
+
+.home-activity-container{
+    position: relative;
+}
+
+#home-text-activity{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.progress-bar{
+    margin: 10px;
+}
+
+#progress-text{
+    color: #A1A4B2;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.home-activity-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-around; /* Space evenly horizontally */
+    gap: 10px;
+    padding: 0 10px; /* Add padding to the container for left and right spacing */
+}
+
+.home-activity-card {
+    position: relative;
+    width: calc(50% - 10px); /* Adjust width to account for spacing */
+    margin-bottom: 10px; /* Add some margin at the bottom */
+}
+
+.home-activity-card img {
+    width: 100%;
+    height: auto;
+}
+
+#activity-hydration{
+    cursor: pointer;
+}
+
+.home-activity {
+    position: absolute; /* Position the activity absolutely */
+    top: 50%; /* Center vertically */
+    left: 35%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the activity */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+}
+
+.home-activity-description{
+    position: absolute; /* Position the activity absolutely */
+    top: 80%; /* Center vertically */
+    left: 23%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the activity */
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+}
+
+.home-navigation {
+    position: relative;
+    bottom: -8px;
+
+}
+
+.home-navigation img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0px -18px 14px rgba(140, 143, 146, 0.158);
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*Weather Styles*/
+
+.weather-backgroundhalf {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.weather-backgroundhalf img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.weather-header {
+    position: absolute;
+    top: 47px; /* Adjust as needed */
+    width: 399px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between elements */
+    color: white;
+}
+
+#weather-today-date {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.w-back-button{
+    cursor: pointer;
+}
+
+.weather-forecast-icon {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.weather-today {
+    width: 275px;
+    position: absolute;
+    top: 108px; /* Adjust based on the desired position over the background */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensure it is above other elements */
+}
+
+#weather-location {
+    font-size: 16px;
+}
+
+#weather-current-temp {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#weather-w-icon {
+    width: 120px !important; /* Adjust width */
+    height: 120px !important; /* Adjust height */
+    margin: auto; /* Reduced margin and centered horizontally */
+    margin-top: 10px;
+    display: block; /* Ensure block-level display */
+}
+
+#weather-condition {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.other {
+    width: 275px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+#weather-text {
+    margin: 20px;
+    word-wrap: break-word;
+    text-align: left; /* Align text to the left */
+}
+
+.weather-activity-header {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    display: flex; /* Make the container a flex container */
+    justify-content: space-between; /* Space the elements evenly */
+    align-items: center; /* Align items vertically */
+}
+
+.button{
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;    
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+#activate-button{
+    width: 180px;
+    background: #585CE5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    justify-content: center;
+}
+
+.weather-activity-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-around; /* Space evenly horizontally */
+}
+
+.weather-activity-card {
+    position: relative;
+    width: 45%; /* Adjust as needed */
+    margin-bottom: -10px; /* Add some margin at the bottom */
+    margin-right: 9px;
+}
+
+.activity-card img {
+    width: 100%;
+    height: auto;
+}
+
+.weather-activity{
+    position: absolute;
+    top: 76px; /* Position in the middle of the card */
+    left: 76px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+    max-width: 100%; /* Ensure text doesn't overflow the card */
+    white-space: pre-wrap; /* Allows text to wrap */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*Forecast Styles*/
+
+.forecast-header {
+    position: absolute;
+    top: 47px; /* Adjust as needed */
+    width: 399px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(63, 65, 78, 1);
+}
+
+.f-header {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 38px;
+}
+
+.backButton {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M328 112L184 256l144 144'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100%;
+    cursor: pointer;
+}
+
+#f-backButton, #a-backButton{
+    cursor: pointer;
+}
+
+.forecast-container {
+    width: 358px;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 8px;
+    display: flex;
+    margin: auto;
+    margin-top: 95px; /* Center the forecast container */
+}
+
+.forecast-card {
+    width: 358px;
+    height: 44px;
+    background: #4E60A5;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Added padding for spacing */
+    color: white;
+}
+
+.forecast-card .day,
+.forecast-card .temp {
+    margin: 0 10px; /* Added margin for spacing */
+    font-size: 12px;
+}
+
+.f-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.forecast-activity-container {
+    width: 358px;
+    height: 83px;
+    background: #4E60A5;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    padding-left: 10px;
+    gap: 4px;
+}
+
+#forecast-subtext {
+    color: white;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 0px; /* Add margin bottom to separate text from activity cards */
+}
+
+.activity-cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.forecast-activity-card {
+    position: relative;
+    width: 45%; /* Adjust as needed */
+    margin-bottom: -10px; /* Add some margin at the bottom */
+    margin-right: 9px;
+}
+
+.forecast-activity-card img {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.forecast-activity {
+    position: absolute;
+    width: 70px;
+    top: 22px; /* Position in the middle of the card */
+    left: 38px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+    max-width: 100%; /* Ensure text doesn't overflow the card */
+    white-space: pre-wrap; /* Allows text to wrap */
+    display: -webkit-box; /* Enables flexbox layout in older versions of WebKit browsers */
+    -webkit-box-orient: vertical; /* Sets the flexbox layout to be vertical */
+    -webkit-line-clamp: 2; /* Limits the content to two lines */
+    overflow: hidden; /* Hides any overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) at the end of the truncated text */
+    word-wrap: break-word; /* Ensures long words break properly */
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*Activity 1 Styles*/
+
+.activity-header {
+    position: absolute;
+    top: 47px; /* Adjust as needed */
+    width: 399px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(63, 65, 78, 1);
+}
+
+.a-header {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 38px;
+}
+
+.activity-icon{
+    width: 229px;
+    height: 229px;
+    position: absolute;
+    left: 20%;
+    top: 144px;
+}
+
+.activity-icon img{
+    width: 100%;
+    height: auto; 
+    border-radius: 160px;
+    box-shadow: 6px 10px 16px rgba(0, 0, 0, 0.25);
+}
+
+.activity-instruction{
+    position: absolute;
+    color: #3F414E;
+    text-align: left;
+    margin: 20px;
+    top: 444px;
+}
+
+.activity-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.instruction{
+    line-height: 25px;
+    font-size: 20px;
+}
+
+#start-button, #add-button, #add-water-button{
+    position: absolute;
+    width: 164px;
+    height: 48px;
+    top: 610px;
+    background: #585CE5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    justify-content: center;
+    margin: 29%;
+    align-items: center;
+}
+
+#footer-activity {
+    position: absolute;
+    top: 810px;
+    width: 390px;
+    padding-top: 17px;
+    padding-bottom: 9px;
+    background: rgba(255, 255, 255, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+#activity-indicator{
+    width: 127px;
+    height: 5px;
+    background: black;
+    border-radius: 100px;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*Activity 2 Styles*/
+
+#activity-page{
+    align-items: center;
+}
+.activity2-header {
+    position: absolute;
+    top: 47px; /* Adjust as needed */
+    left: 340px;
+    width: 399px;
+    height: 43px;
+    display: flex;
+    color: rgba(63, 65, 78, 1);
+}
+
+.ph--x-bold {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23000' d='M208.49 191.51a12 12 0 0 1-17 17L128 145l-63.51 63.49a12 12 0 0 1-17-17L111 128L47.51 64.49a12 12 0 0 1 17-17L128 111l63.51-63.52a12 12 0 0 1 17 17L145 128Z'/%3E%3C/svg%3E");
+    background-color: #3F414E;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    cursor: pointer;
+}
+
+.water-level{
+    position: absolute;
+    top: 132px;
+}
+
+.plus-minus{
+    position: absolute;
+    top: 540px;
+    display: flex;
+    gap: 50px;
+}
+
+.level{
+    color: #3F414E;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.ic--round-minus {
+    font-size: 28px;
+    background-color: #585CE5;
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    border: #ffffff00;
+    padding: auto;
+    cursor: pointer;
+}
+
+.ic--round-plus {
+    font-size: 28px;
+    background-color: #585CE5;
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    border: #ffffff00;
+    padding: auto;
+    cursor: pointer;
+}
+
+.continue-button{
+    position: absolute;
+    width: 102px;
+    height: 32px;
+    top: 470px;
+    background: #585CE5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: #22222200;
+    cursor: pointer;
+}

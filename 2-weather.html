@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Weather API</title>
+    </head>
+    
+<body>
+
+<div class="container">
+    <div class="weather-backgroundhlf">
+        <img src="images/backgroundHalf.png" alt="backgroundHalf">
+        
+        <div class="statusBar">
+            <img src="images/statusbar-light.png" alt="statusBar">
+        </div>
+
+        <div class="weather-header">
+            <div class="w-back-button">
+                <img src="images/back-button.png" alt="w-back-button">
+            </div>
+            <div class="today-date" id="weather-today-date">Monday, 20 May 2024</div>
+            <div class="weather-forecast-icon">
+                <img src="images/forecast-icon.png" alt="forecast-icon">
+            </div>
+        </div>
+
+        <div class="weather-today">
+            <div class="location" id="weather-location">Skudai, Johor</div>
+            <div class="w-temp" id="weather-current-temp">22&#176;C</div>
+            <img src="images/sun-icon.png" alt="weather icon" class="w-icon" id="weather-w-icon">
+            <div class="condition" id="weather-condition">Sunny</div>
+            <div class="other">
+                <div class="weather-item">
+                    <div class="label">Humidity</div>
+                    <div class="value">94%</div>
+                </div>
+                <div class="weather-item">
+                    <div class="label">Wind Speed</div>
+                    <div class="value">3.2 km/h</div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="weather-activity-header">
+        <div class="text" id="weather-text">Discover Today's Weather Activities</div>
+    </div>
+
+    <div class="weather-activity-container">
+        <div class="weather-activity-card">
+            <img src="images/activity-card-blue.png" alt="activity card">
+            <div class="weather-activity" id="activity1">Hydration Boost</div>
+        </div>
+        <div class="weather-activity-card">
+            <img src="images/activity-card-red.png" alt="activity card">
+            <div class="weather-activity" id="activity2">Hydration Boost</div>
+        </div>
+        <div class="weather-activity-card">
+            <img src="images/activity-card-yellow.png" alt="activity card">
+            <div class="weather-activity" id="activity3">Hydration Boost</div>
+        </div>
+        <div class="weather-activity-card">
+            <img src="images/activity-card-green.png" alt="activity card">
+            <div class="weather-activity" id="activity4">Hydration Boost</div>
+        </div>
+    </div>
+
+    <div class="activate-button">
+            <button class="button" id="activate-button">Start Self-care Journey</button>
+    </div>
+
+
+    <div class="footer">
+        <div class="home-indicator"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+<script src="main.js"></script>
+
+</body>
+</html>
